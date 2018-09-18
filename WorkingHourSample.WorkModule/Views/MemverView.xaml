@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding TableProvider.Member}" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding TableProvider.Member}" AutoGenerateColumns="False" Height="400">
             
         </DataGrid>
     </Grid>

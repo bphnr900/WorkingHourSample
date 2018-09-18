@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.Unity;
 using WorkingHourSample.WorkModule.Models;
 using Prism.Mvvm;
+using System.Collections.ObjectModel;
 
 namespace WorkingHourSample.WorkModule.ViewModels
 {

@@ -21,6 +21,6 @@
             </MenuItem>
         </Menu>
         <ContentControl prism:RegionManager.RegionName="MainRegion"/>
-        <ContentControl prism:RegionManager.RegionName="MemberRegion"/>
+        <ContentControl prism:RegionManager.RegionName="MemberRegion" Height="400"/>
     </StackPanel>
 </Window>
