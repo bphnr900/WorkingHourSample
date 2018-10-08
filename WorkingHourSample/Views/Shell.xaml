@@ -8,19 +8,8 @@
         mc:Ignorable="d"
         Title="過勤情報一覧" Height="450" Width="800">
     <StackPanel>
-        <Menu>
-            <MenuItem Header="ファイル(_F)">
-                <MenuItem Header="出力"/>
-            </MenuItem>
-            <MenuItem Header="編集(_E)">
-                <MenuItem Header="ログイン情報"/>
-            </MenuItem>
-            <MenuItem Header="オプション(_O)">
-                <MenuItem Header="配信先一覧"/>
-                <MenuItem Header="問い合わせ先"/>
-            </MenuItem>
-        </Menu>
-        <ContentControl prism:RegionManager.RegionName="MainRegion"/>
+        
+        <!--<ContentControl prism:RegionManager.RegionName="MainRegion"/>-->
         <ContentControl prism:RegionManager.RegionName="MemberRegion" Height="400"/>
     </StackPanel>
 </Window>

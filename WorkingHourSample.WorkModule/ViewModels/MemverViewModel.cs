@@ -12,7 +12,19 @@ namespace WorkingHourSample.WorkModule.ViewModels
 {
     class MemverViewModel : BindableBase
     {
+        public string Title { get; } = "過勤状況";
+        public string UserId { get; } = "ログインID : " + GetUserId();
+
         [Dependency]
         public TableProvider TableProvider { get; set; }
+        
+        public ObservableCollection<Person> people { get; }
+
+
+
+        private static string GetUserId()
+        {
+            return "A00001";
+        }
     }
 }

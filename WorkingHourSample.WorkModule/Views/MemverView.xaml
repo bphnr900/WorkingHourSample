@@ -8,9 +8,74 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <DataGrid ItemsSource="{Binding TableProvider.Member}" AutoGenerateColumns="False" Height="400">
-            
-        </DataGrid>
-    </Grid>
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="ファイル(_F)">
+                <MenuItem Header="出力"/>
+            </MenuItem>
+            <MenuItem Header="編集(_E)">
+                <MenuItem Header="ログイン情報"/>
+            </MenuItem>
+            <MenuItem Header="オプション(_O)">
+                <MenuItem Header="配信先一覧"/>
+                <MenuItem Header="問い合わせ先"/>
+            </MenuItem>
+        </Menu>
+        <!--<TextBlock Text="{Binding Title}"/>-->
+        <Button Name="再取得"/>
+        <TextBlock Text="{Binding UserId}"/>
+        <TabControl>
+            <!--<DataGrid ItemsSource="{Binding TableProvider.Member}" AutoGenerateColumns="True" Height="400"/>-->
+            <TabItem Header="Ordinal">
+                <DataGrid ItemsSource="{Binding TableProvider.WorkingInformation}" AutoGenerateColumns="True" Height="400"/>
+            </TabItem>
+            <TabItem Header="OverWorkHour">
+                <DataGrid ItemsSource="{Binding TableProvider.List}" AutoGenerateColumns="False" Height="400">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding [0]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="1" Binding="{Binding [1]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="2" Binding="{Binding [2]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="3" Binding="{Binding [3]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="4" Binding="{Binding [4]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="5" Binding="{Binding [5]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="6" Binding="{Binding [6]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="7" Binding="{Binding [7]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="8" Binding="{Binding [8]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="9" Binding="{Binding [9]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="10" Binding="{Binding [10]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="11" Binding="{Binding [11]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="12" Binding="{Binding [12]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="13" Binding="{Binding [13]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="14" Binding="{Binding [14]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="15" Binding="{Binding [15]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="16" Binding="{Binding [16]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="17" Binding="{Binding [17]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="18" Binding="{Binding [18]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="19" Binding="{Binding [19]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="20" Binding="{Binding [20]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="21" Binding="{Binding [21]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="22" Binding="{Binding [22]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="23" Binding="{Binding [23]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="24" Binding="{Binding [24]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="25" Binding="{Binding [25]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="26" Binding="{Binding [26]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="27" Binding="{Binding [27]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="28" Binding="{Binding [28]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="29" Binding="{Binding [29]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="30" Binding="{Binding [30]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="31" Binding="{Binding [31]}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Total" Binding="{Binding [32]}" IsReadOnly="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Extract">
+                <DataGrid ItemsSource="{Binding TableProvider.ExtractList}" AutoGenerateColumns="False" Height="400">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Total" Binding="{Binding Total}" IsReadOnly="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
 </UserControl>

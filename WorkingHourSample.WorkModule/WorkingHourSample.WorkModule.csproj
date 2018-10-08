@@ -72,7 +72,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\MessageProvider.cs" />
+    <Compile Include="Models\OverWorker.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\TableProvider.cs" />
+    <Compile Include="Models\Worker.cs" />
+    <Compile Include="Models\WorkingInformation.cs" />
+    <Compile Include="Models\WorkingInformationList.cs" />
+    <Compile Include="Models\WorkTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

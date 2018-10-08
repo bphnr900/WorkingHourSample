@@ -24,7 +24,7 @@ namespace WorkingHourSample.WorkModule.Views
         public MemverView()
         {
             InitializeComponent();
-            this.DataContext = new MemverViewModel();
+            //this.DataContext = new MemverViewModel();
         }
     }
 }
